@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess the Number 9</title>
+</head>
+<body>
+    <h1> Guess the Number Game</h1>
+    <p>Hint: The number is between 1 and 10 </p>
+
+    <input type="number" id="userGuess" placeholder="Enter your guess">
+    <button onclick="checkGuess()">Guess</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkGuess() {
+            let guess = Number(document.getElementById("userGuess").value);
+            
+            if (guess === 9) {
+                document.getElementById("result").textContent = " Correct! The number is 9.";
+            } else {
+                document.getElementById("result").textContent = " Wrong! Try again.";
+            }
+        }
+    </script>
+</body>
+</html>
